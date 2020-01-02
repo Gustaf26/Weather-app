@@ -6,7 +6,7 @@ searchEl=document.querySelector(".search");
 
 //pictureEl = document.querySelector(".picture");
 
-iconEl = document.querySelector(".icon");
+iconEl = document.querySelector(".icono");
 
 detailsEl = document.querySelector(".details");
 
@@ -61,6 +61,17 @@ const outputWeather = (forecast) => {
 
     forecastEl.innerHTML = forecast.WeatherText;
     tempEl.innerText= forecast.Temperature.Metric.Value;
-    iconEl.src=forecast.WeatherIcon;
+
+    if (forecast.WeatherText="Mostly clear") {
+    iconEl.src=`images/partly-cloudy.png`;
+    }
+
+    else if (forecast.WeatherText="Sunny") {
+        iconEl.src=`images/sunny.png`;
+        }
+    
+    else if (forecast.WeatherText="Rainy") {
+        iconEl.src=`images/rainy.png`;
+        }
 
 }
