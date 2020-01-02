@@ -65,21 +65,21 @@ const outputWeather = (forecast) => {
 
     if (forecast.IsDayTime) {pictureEl.src="images/cloudy.png";}
 
-    else {pictureEl.src="images/night.png"};
+    else {pictureEl.src="images/night.svg"};
 
     if (forecast.WeatherText=="Mostly clear") {
-    iconEl.src=`images/partly-cloudy.png`;
+    iconEl.src=`images/partly-cloudy.svg`;
     }
 
     else if (forecast.WeatherText=="Sunny") {
-        iconEl.src=`images/sunny.png`;
+        iconEl.src=`images/sunny.svg`;
         }
     
     else if (forecast.WeatherText=="Rainy") {
-        iconEl.src=`images/rainy.png`;
+        iconEl.src=`images/rainy.svg`;
         }
     else if (forecast.WeatherText=="Cloudy") {
-            iconEl.src=`images/cloudy.png`;
+            iconEl.src=`images/cloudy.svg`;
             }
     
 }
