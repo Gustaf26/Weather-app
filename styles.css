@@ -10,6 +10,10 @@ body{
 .card {
   background-color: #dad8d7;}
 
+.iconcard {display:flex;
+  justify-content:center;
+  background-color:white;}
+
 img.picture {width:75%;
   height:auto;
   margin:0 auto;}

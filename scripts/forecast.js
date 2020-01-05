@@ -63,7 +63,7 @@ const outputWeather = (forecast) => {
     forecastEl.innerHTML = forecast.WeatherText;
     tempEl.innerText= forecast.Temperature.Metric.Value;
 
-    if (forecast.IsDayTime) {pictureEl.src="images/cloudy.png";}
+    if (forecast.IsDayTime) {pictureEl.src="images/partly-cloudy.svg";}
 
     else {pictureEl.src="images/night.svg"};
 
@@ -71,11 +71,15 @@ const outputWeather = (forecast) => {
     iconEl.src=`images/partly-cloudy.svg`;
     }
 
-    else if (forecast.WeatherText=="Sunny") {
+    else if (forecast.WeatherText=="Clear") {
         iconEl.src=`images/sunny.svg`;
         }
+
+    else if (forecast.WeatherText=="Sunny") {
+            iconEl.src=`images/sunny.svg`;
+            }
     
-    else if (forecast.WeatherText=="Rainy") {
+    else if (forecast.WeatherText=="Rain") {
         iconEl.src=`images/rainy.svg`;
         }
     else if (forecast.WeatherText=="Cloudy") {
